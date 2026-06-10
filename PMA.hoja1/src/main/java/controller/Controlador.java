@@ -78,4 +78,9 @@ public class Controlador {
     modelo.repetirPalabras(palabra, repeticiones);
 }
   
+  private void ejecutarEj19() {
+    String password = vista.pedirTexto("Ingrese la contraseña");
+    vista.mostrarResultado(modelo.validarPassword(password));
+}
+  
 }

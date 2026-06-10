@@ -43,6 +43,10 @@ public void repetirPalabras(String palabra, int n) {
     System.out.println(); 
 }
 
+public String validarPassword(String password) {
+    return password.length() > 8 ? "Segura" : "Insegura";
+}
+
 }
 
 
