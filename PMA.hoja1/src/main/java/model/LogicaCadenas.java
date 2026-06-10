@@ -16,7 +16,17 @@ public class LogicaCadenas {
     return palabra.length();
 }
     
-}
+
 public String invertirTexto(String palabra) {
     return new StringBuilder(palabra).reverse().toString();
+    
 }
+
+public boolean esVocal(char caracter) {
+    String vocales = "AEIOUaeiou";
+    return vocales.indexOf(caracter) != -1;
+}
+
+}
+
+

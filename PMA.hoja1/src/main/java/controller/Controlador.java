@@ -48,4 +48,11 @@ public class Controlador {
     String palabra = vista.pedirTexto("Ingrese una palabra a invertir");
     vista.mostrarResultado(modelo.invertirTexto(palabra));
 }
+  
+  private void ejecutarEj14() {
+    char c = vista.pedirCaracter("Ingrese un carácter");
+    boolean resultado = modelo.esVocal(c);
+    vista.mostrarResultado(resultado ? "true (Es vocal)" : "false (No es vocal)");
+}
+  
 }
