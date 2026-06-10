@@ -47,6 +47,10 @@ public String validarPassword(String password) {
     return password.length() > 8 ? "Segura" : "Insegura";
 }
 
+public String generarEmail(String nombre, String apellido, String dominio) {
+    return nombre.toLowerCase() + "." + apellido.toLowerCase() + "@" + dominio.toLowerCase();
+}
+
 }
 
 

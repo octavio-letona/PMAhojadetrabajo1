@@ -2,16 +2,29 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package controller;
+package PMA.hoja1; // Asegúrate de que tenga el nombre correcto de tu paquete
+
+import model.LogicaCadenas;
+import view.MenuPrincipal;
+
+
 public class Controlador {
-    private Vista vista;
+    private final MenuPrincipal vista; // Aquí usamos MenuPrincipal en lugar de Vista
     private LogicaCadenas modelo;
 
-    public Controlador(Vista vista, LogicaCadenas modelo) {
+    // Actualizamos el constructor para recibir MenuPrincipal
+    public Controlador(MenuPrincipal vista, LogicaCadenas modelo) { 
         this.vista = vista;
         this.modelo = modelo;
     }
 
+    public static void main(String[] args) {
+        MenuPrincipal vista = new MenuPrincipal();
+        LogicaCadenas modelo = new LogicaCadenas();
+        Controlador controlador = new Controlador(vista, modelo);
+        controlador.iniciar();
+    }
+ 
     public void iniciar() {
         int opcion;
         do {
@@ -81,6 +94,12 @@ public class Controlador {
   private void ejecutarEj19() {
     String password = vista.pedirTexto("Ingrese la contraseña");
     vista.mostrarResultado(modelo.validarPassword(password));
+}
+  private void ejecutarEj20() {
+    String nombre = vista.pedirTexto("Ingrese el nombre");
+    String apellido = vista.pedirTexto("Ingrese el apellido");
+    String dominio = vista.pedirTexto("Ingrese el dominio (ej. kinal.edu.gt)");
+    vista.mostrarResultado(modelo.generarEmail(nombre, apellido, dominio));
 }
   
 }
