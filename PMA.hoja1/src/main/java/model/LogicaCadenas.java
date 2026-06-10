@@ -32,7 +32,9 @@ public String extraerIniciales(String nombre, String apellido) {
     String inicialApellido = apellido.isEmpty() ? "" : String.valueOf(apellido.charAt(0));
     return (inicialNombre + inicialApellido).toUpperCase();
 }
-
+public String normalizarMayusculas(String texto) {
+    return texto.toUpperCase();
+}
 }
 
 

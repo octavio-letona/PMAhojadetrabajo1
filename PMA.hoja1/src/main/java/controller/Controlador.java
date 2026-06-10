@@ -61,4 +61,9 @@ public class Controlador {
     vista.mostrarResultado(modelo.extraerIniciales(nombre, apellido));
 }
   
+  private void ejecutarEj16() {
+    String texto = vista.pedirTexto("Ingrese el texto mixto");
+    vista.mostrarResultado(modelo.normalizarMayusculas(texto));
+}
+  
 }
