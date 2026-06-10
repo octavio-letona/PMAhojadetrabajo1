@@ -44,5 +44,8 @@ public class Controlador {
     String palabra = vista.pedirTexto("Ingrese una palabra");
     vista.mostrarResultado("La palabra tiene " + modelo.contarLongitud(palabra) + " letras.");
 }
-  
+  private void ejecutarEj13() {
+    String palabra = vista.pedirTexto("Ingrese una palabra a invertir");
+    vista.mostrarResultado(modelo.invertirTexto(palabra));
+}
 }

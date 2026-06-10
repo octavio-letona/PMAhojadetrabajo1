@@ -17,3 +17,6 @@ public class LogicaCadenas {
 }
     
 }
+public String invertirTexto(String palabra) {
+    return new StringBuilder(palabra).reverse().toString();
+}
