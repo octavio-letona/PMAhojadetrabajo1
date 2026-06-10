@@ -71,4 +71,11 @@ public class Controlador {
     vista.mostrarResultado("La longitud es: " + modelo.conversorBinario(textoBinario));
 }
   
+  private void ejecutarEj18() {
+    String palabra = vista.pedirTexto("Ingrese una palabra");
+    int repeticiones = vista.pedirEntero("Ingrese la cantidad de repeticiones (N)");
+    System.out.print(">> Resultado: ");
+    modelo.repetirPalabras(palabra, repeticiones);
+}
+  
 }

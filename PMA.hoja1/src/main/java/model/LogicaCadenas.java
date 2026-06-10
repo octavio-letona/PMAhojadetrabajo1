@@ -4,10 +4,6 @@
  */
 package model;
 
-/**
- *
- * @author sheyl
- */
 public class LogicaCadenas {
     public String concatenarNombre(String nombre, String apellido) {
     return nombre + " " + apellido;
@@ -38,6 +34,13 @@ public String normalizarMayusculas(String texto) {
 
 public String conversorBinario(String texto) {
     return (texto.length() % 2 == 0) ? "Par" : "Impar";
+}
+
+public void repetirPalabras(String palabra, int n) {
+    for (int i = 0; i < n; i++) {
+        System.out.print(palabra + " ");
+    }
+    System.out.println(); 
 }
 
 }
