@@ -9,5 +9,11 @@ package model;
  * @author sheyl
  */
 public class LogicaCadenas {
+    public String concatenarNombre(String nombre, String apellido) {
+    return nombre + " " + apellido;
+}
+    public int contarLongitud(String palabra) {
+    return palabra.length();
+}
     
 }

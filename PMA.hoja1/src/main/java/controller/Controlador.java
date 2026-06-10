@@ -3,11 +3,46 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package controller;
+public class Controlador {
+    private Vista vista;
+    private LogicaCadenas modelo;
 
-/**
- *
- * @author sheyl
- */
-public class controlador {
+    public Controlador(Vista vista, LogicaCadenas modelo) {
+        this.vista = vista;
+        this.modelo = modelo;
+    }
+
+    public void iniciar() {
+        int opcion;
+        do {
+            vista.mostrarMenu();
+            opcion = vista.pedirEntero("Opción");
+
+            switch (opcion) {
+                case 11: ejecutarEj11(); break;
+                case 12: ejecutarEj12(); break;
+                case 13: ejecutarEj13(); break;
+                case 14: ejecutarEj14(); break;
+                case 15: ejecutarEj15(); break;
+                case 16: ejecutarEj16(); break;
+                case 17: ejecutarEj17(); break;
+                case 18: ejecutarEj18(); break;
+                case 19: ejecutarEj19(); break;
+                case 20: ejecutarEj20(); break;
+                case 0:  System.out.println("Saliendo del módulo..."); break;
+                default: System.out.println("Opción no válida.");
+            }
+        } while (opcion != 0); 
+    }
+    private void ejecutarEj11() {
+    String nombre = vista.pedirTexto("Ingrese el nombre");
+    String apellido = vista.pedirTexto("Ingrese el apellido");
+    vista.mostrarResultado(modelo.concatenarNombre(nombre, apellido));
+}
     
+    private void ejecutarEj12() {
+    String palabra = vista.pedirTexto("Ingrese una palabra");
+    vista.mostrarResultado("La palabra tiene " + modelo.contarLongitud(palabra) + " letras.");
+}
+  
 }
