@@ -55,4 +55,10 @@ public class Controlador {
     vista.mostrarResultado(resultado ? "true (Es vocal)" : "false (No es vocal)");
 }
   
+  private void ejecutarEj15() {
+    String nombre = vista.pedirTexto("Ingrese el nombre");
+    String apellido = vista.pedirTexto("Ingrese el apellido");
+    vista.mostrarResultado(modelo.extraerIniciales(nombre, apellido));
+}
+  
 }
