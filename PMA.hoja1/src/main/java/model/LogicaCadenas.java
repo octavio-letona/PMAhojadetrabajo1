@@ -35,6 +35,11 @@ public String extraerIniciales(String nombre, String apellido) {
 public String normalizarMayusculas(String texto) {
     return texto.toUpperCase();
 }
+
+public String conversorBinario(String texto) {
+    return (texto.length() % 2 == 0) ? "Par" : "Impar";
+}
+
 }
 
 

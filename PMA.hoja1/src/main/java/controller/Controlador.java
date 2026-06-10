@@ -66,4 +66,9 @@ public class Controlador {
     vista.mostrarResultado(modelo.normalizarMayusculas(texto));
 }
   
+  private void ejecutarEj17() {
+    String textoBinario = vista.pedirTexto("Ingrese texto de 0s y 1s");
+    vista.mostrarResultado("La longitud es: " + modelo.conversorBinario(textoBinario));
+}
+  
 }
